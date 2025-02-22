@@ -30,4 +30,10 @@ public class CallsController {
     public String sayHello(@RequestBody UserDTO user) {
         return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
     }
+
+    //Creating PUT request method
+    @PutMapping("/put/{firstName}")
+    public String sayHello(@PathVariable String firstName , @RequestParam String lastName){
+        return "Hello "+ firstName + " " + lastName + " From BridgeLabz";
+    }
 }
